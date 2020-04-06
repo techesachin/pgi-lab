@@ -7,5 +7,5 @@ Following System configuration is required.
  3. postgresql
  4. postgres JDBC jar.
  5. git
- 
+ 6. post man
  
