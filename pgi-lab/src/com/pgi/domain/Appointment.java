@@ -7,7 +7,7 @@ public class Appointment {
    private String id;
     private String patientName;
     private String patientId;
-
+    private String doctorId;
     private String mobileNumber;
     private String emailId;
     private boolean dNotifyViaSms;
