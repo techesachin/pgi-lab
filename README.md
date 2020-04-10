@@ -1,5 +1,5 @@
 # pgi-lab
-This is a repository to contain the code of PGI university
+This is a repository to contain the code of PGI university.
 
 Following System configuration is required.
  1. Java 8 or above version
