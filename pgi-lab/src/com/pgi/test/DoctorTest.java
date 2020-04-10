@@ -1,4 +1,4 @@
-package com.pgi;
+package com.pgi.test;
 
 import com.pgi.dao.impl.DoctorDAOImpl;
 import com.pgi.domain.Doctor;

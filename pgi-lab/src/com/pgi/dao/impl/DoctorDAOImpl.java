@@ -151,7 +151,7 @@ public class DoctorDAOImpl implements DoctorDAO {
         List<Doctor> doctors = null;
         try {
             final ResultSet resultSet = preparedStatement.executeQuery();
-            getAllDoctorsFromResultSet(resultSet);
+            doctors=getAllDoctorsFromResultSet(resultSet);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -184,15 +184,12 @@ public class DoctorDAOImpl implements DoctorDAO {
         doctor.setCity(resultSet.getString(i++));
         doctor.setState(resultSet.getString(i++));
         doctor.setLandMark(resultSet.getString(i++));
-
         doctor.setPinCode(resultSet.getInt(i++));
         doctor.setSpeciality(resultSet.getString(i++));
         doctor.setCreatedDate(resultSet.getTimestamp(i++).toLocalDateTime());
         doctor.setCreatedBy(resultSet.getString(i++));
         doctor.setLastUpdatedDate(resultSet.getTimestamp(i++).toLocalDateTime());
         doctor.setLastUpdateBy(resultSet.getString(i++));
-
-
         return doctor;
     }
 
