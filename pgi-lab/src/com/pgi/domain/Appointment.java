@@ -1,15 +1,12 @@
 package com.pgi.domain;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Date;
 
-public class Appointment {
-   private String id;
-    private String patientName;
+public class Appointment extends Base {
+    private String id;
     private String patientId;
     private String doctorId;
-    private String mobileNumber;
-    private String emailId;
     private boolean dNotifyViaSms;
     private boolean dNotifyViaEmail;
     private boolean pViaSms;
@@ -18,6 +15,9 @@ public class Appointment {
     private String scheduledTime;
     private String scheduledDuration;
     private String notes;
+    private String status;
+    private String title;
+    private String description;
 
     public String getId() {
         return id;
@@ -25,14 +25,6 @@ public class Appointment {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getPatientName() {
-        return patientName;
-    }
-
-    public void setPatientName(String patientName) {
-        this.patientName = patientName;
     }
 
     public String getPatientId() {
@@ -43,20 +35,12 @@ public class Appointment {
         this.patientId = patientId;
     }
 
-    public String getMobileNumber() {
-        return mobileNumber;
+    public String getDoctorId() {
+        return doctorId;
     }
 
-    public void setMobileNumber(String mobileNumber) {
-        this.mobileNumber = mobileNumber;
-    }
-
-    public String getEmailId() {
-        return emailId;
-    }
-
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setDoctorId(String doctorId) {
+        this.doctorId = doctorId;
     }
 
     public boolean isdNotifyViaSms() {
@@ -119,19 +103,40 @@ public class Appointment {
         return notes;
     }
 
-
     public void setNotes(String notes) {
         this.notes = notes;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
     public String toString() {
         return "Appointment{" +
                 "id='" + id + '\'' +
-                ", patientName='" + patientName + '\'' +
                 ", patientId='" + patientId + '\'' +
-                ", mobileNumber='" + mobileNumber + '\'' +
-                ", emailId='" + emailId + '\'' +
+                ", doctorId='" + doctorId + '\'' +
                 ", dNotifyViaSms=" + dNotifyViaSms +
                 ", dNotifyViaEmail=" + dNotifyViaEmail +
                 ", pViaSms=" + pViaSms +
@@ -140,6 +145,10 @@ public class Appointment {
                 ", scheduledTime='" + scheduledTime + '\'' +
                 ", scheduledDuration='" + scheduledDuration + '\'' +
                 ", notes='" + notes + '\'' +
+                ", status='" + status + '\'' +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }
+

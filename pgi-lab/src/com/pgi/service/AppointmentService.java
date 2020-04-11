@@ -1,7 +1,12 @@
 package com.pgi.service;
 
 import com.pgi.domain.Appointment;
+import com.pgi.utils.PGIDateTimeUtil;
 
+import javax.xml.crypto.Data;
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.*;
 
 public class AppointmentService {
@@ -29,31 +34,29 @@ public class AppointmentService {
 
 
         Appointment appointment1 = new Appointment();
-        appointment1.setScheduledDate(new Date());
+        appointment1.setScheduledDate(PGIDateTimeUtil.getDateByStringDate("2020-04-20"));
         appointment1.setScheduledDuration("30:min");
         appointment1.setScheduledTime("10am t0 5am");
         appointment1.setpViaSms(false);
         appointment1.setpViaEmail(true);
-        appointment1.setPatientName("sachin");
+
         appointment1.setPatientId("12345@");
         appointment1.setNotes("abc");
-        appointment1.setMobileNumber("700463424");
-        appointment1.setEmailId("schin@gmail.com");
+
         appointment1.setdNotifyViaSms(true);
         appointment1.setdNotifyViaEmail(false);
 
         appointments.add(appointment1);
         Appointment appointment2 = new Appointment();
-        appointment2.setScheduledDate(new Date());
+        appointment2.setScheduledDate(PGIDateTimeUtil.getDateByStringDate("2020-04-20"));
         appointment2.setScheduledDuration("30:min");
         appointment2.setScheduledTime("10am t0 5am");
         appointment2.setpViaSms(false);
         appointment2.setpViaEmail(true);
-        appointment2.setPatientName("sachin");
+
         appointment2.setPatientId("12345@");
         appointment2.setNotes("abc");
-        appointment2.setMobileNumber("700463424");
-        appointment2.setEmailId("schin@gmail.com");
+
         appointment2.setdNotifyViaSms(true);
         appointment2.setdNotifyViaEmail(false);
 
@@ -61,16 +64,15 @@ public class AppointmentService {
 
 
         Appointment appointment3 = new Appointment();
-        appointment3.setScheduledDate(new Date());
+        appointment3.setScheduledDate(PGIDateTimeUtil.getDateByStringDate("2020-04-20"));
         appointment3.setScheduledDuration("30:min");
         appointment3.setScheduledTime("10am t0 5am");
         appointment3.setpViaSms(false);
         appointment3.setpViaEmail(true);
-        appointment3.setPatientName("sachin");
+
         appointment3.setPatientId("12345@");
         appointment3.setNotes("abc");
-        appointment3.setMobileNumber("700463424");
-        appointment3.setEmailId("schin@gmail.com");
+
         appointment3.setdNotifyViaSms(true);
         appointment3.setdNotifyViaEmail(false);
 
@@ -80,8 +82,3 @@ public class AppointmentService {
 }
 
 
-/*
-
-appointment{"patientName":"Sachin",}
-
- */

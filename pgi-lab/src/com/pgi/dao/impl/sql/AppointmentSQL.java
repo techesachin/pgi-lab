@@ -1,9 +1,9 @@
 package com.pgi.dao.impl.sql;
 
 public interface AppointmentSQL {
-    default String getCreateAppointment(){
-        String createSql=null;
-        StringBuilder sql=new StringBuilder();
+    default String getCreateAppointment() {
+        String createSql = null;
+        StringBuilder sql = new StringBuilder();
         sql.append("insert into appointment values (");
 
         sql.append("?,");  //id
@@ -26,9 +26,11 @@ public interface AppointmentSQL {
         sql.append("?");//last_updated_by
 
 
-        sql.append(")");
+        sql.append(");");
 
-        createSql=sql.toString();
+        createSql = sql.toString();
         return createSql;
     }
+
+
 }

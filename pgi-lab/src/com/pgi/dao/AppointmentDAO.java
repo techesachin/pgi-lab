@@ -10,15 +10,19 @@ public interface AppointmentDAO {
 
     public List<Appointment> getAppointments();
 
+    public Appointment getAppointmentById(String id);
+
     public List<Appointment> getAppointmentsByDate(Date appointmentDate);
 
     public boolean delete(Appointment appointment);
 
     public Appointment updateAppointment(Appointment appointment);
 
-    public Appointment getAppointmentByDoctorId(String doctorId);
+    public List<Appointment> getAppointmentByDoctorId(String doctorId);
 
-    public Appointment getAppointmentByPatientId(String doctorId);
+    public List<Appointment> getAppointmentByPatientId(String patientId);
+
+    public boolean updateAppointmentStatus(Appointment appointment);
 
 
 }
